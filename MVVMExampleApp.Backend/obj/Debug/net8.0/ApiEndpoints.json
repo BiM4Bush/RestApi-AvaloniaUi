@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "MVVMExampleApp.Backend.Controllers.AddController",
+    "Method": "AddNumbers",
+    "RelativePath": "api/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MVVMExampleApp.Backend.Models.AddRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MVVMExampleApp.Backend.Models.AddResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

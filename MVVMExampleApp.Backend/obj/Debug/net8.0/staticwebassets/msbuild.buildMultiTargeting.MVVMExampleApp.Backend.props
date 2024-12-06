@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MVVMExampleApp.Backend.props" />
+</Project>

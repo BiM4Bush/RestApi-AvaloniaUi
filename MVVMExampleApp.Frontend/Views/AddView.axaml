@@ -1,0 +1,61 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:MVVMExampleApp.Frontend.ViewModels"
+        mc:Ignorable="d"
+        d:DesignWidth="400" d:DesignHeight="250"
+        x:Class="MVVMExampleApp.Frontend.AddView"
+        x:DataType="viewModels:AddViewModel"
+        Title="Add Numbers">
+
+  <Window.Background>
+    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+      <GradientStop Color="#6a5acd" Offset="0" />
+      <GradientStop Color="#8a2be2" Offset="1" />
+    </LinearGradientBrush>
+  </Window.Background>
+  
+  <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="20">
+    <TextBlock FontSize="24" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Margin="0,0,0,20">
+      Add Two Numbers
+    </TextBlock>
+
+    <TextBox Text="{Binding FirstInteger}"
+             Width="200" Height="40"
+             HorizontalAlignment="Center" Margin="0,0,0,10"
+             Watermark="Enter First Number"
+             Background="#f0f8ff"
+             BorderBrush="#5f4b8b"
+             BorderThickness="2"
+             Padding="10"/>
+
+    <TextBox Text="{Binding SecondInteger}"
+             Width="200" Height="40"
+             HorizontalAlignment="Center" Margin="0,0,0,10"
+             Watermark="Enter Second Number"
+             Background="#f0f8ff"
+             BorderBrush="#5f4b8b"
+             BorderThickness="2"
+             Padding="10"/>
+    
+    
+    <Button Content="Add"
+            Command="{Binding AddCommand}"
+            Width="150" Height="40"
+            Background="#4CAF50" Foreground="White"
+            HorizontalAlignment="Center"
+            FontSize="16" FontWeight="Bold"
+            BorderBrush="#388E3C" BorderThickness="2"
+            Padding="10"/>
+    <ProgressBar IsIndeterminate="{Binding IsProcessing}" Width="200" Height="20" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+    <TextBlock Text="Wynik"
+             FontSize="20" FontWeight="Bold"
+             Foreground="White" HorizontalAlignment="Center"
+             Margin="0,20,0,0"/>
+    <TextBlock Text="{Binding Result}"
+             FontSize="20" FontWeight="Bold"
+             Foreground="White" HorizontalAlignment="Center"
+             Margin="0,20,0,0"/>
+  </StackPanel>
+</Window>
